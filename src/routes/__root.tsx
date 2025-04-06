@@ -6,6 +6,7 @@ import {
   HeadContent,
   Scripts,
 } from "@tanstack/react-router";
+import { TanStackRouterDevtools } from "@tanstack/react-router-devtools";
 
 import appCss from "@/styles/app.css?url";
 
@@ -37,6 +38,7 @@ function RootComponent() {
   return (
     <RootDocument>
       <Outlet />
+      <TanStackRouterDevtools />
     </RootDocument>
   );
 }
@@ -47,7 +49,7 @@ function RootDocument({ children }: Readonly<{ children: ReactNode }>) {
       <head>
         <HeadContent />
       </head>
-      <body className="dark">
+      <body className="dark font-sans">
         {children}
         <Scripts />
       </body>
