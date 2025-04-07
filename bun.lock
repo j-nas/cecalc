@@ -4,6 +4,7 @@
     "": {
       "name": "cecalc",
       "dependencies": {
+        "@fontsource-variable/funnel-sans": "^5.2.5",
         "@hookform/resolvers": "^5.0.1",
         "@radix-ui/react-label": "^2.1.2",
         "@radix-ui/react-slot": "^1.1.2",
@@ -161,6 +162,8 @@
     "@esbuild/win32-ia32": ["@esbuild/win32-ia32@0.20.2", "", { "os": "win32", "cpu": "ia32" }, "sha512-HfLOfn9YWmkSKRQqovpnITazdtquEW8/SoHW7pWpuEeguaZI4QnCRW6b+oZTztdBnZOS2hqJ6im/D5cPzBTTlQ=="],
 
     "@esbuild/win32-x64": ["@esbuild/win32-x64@0.20.2", "", { "os": "win32", "cpu": "x64" }, "sha512-N49X4lJX27+l9jbLKSqZ6bKNjzQvHaT8IIFUy+YIqmXQdjYCToGWwOItDrfby14c78aDd5NHQl29xingXfCdLQ=="],
+
+    "@fontsource-variable/funnel-sans": ["@fontsource-variable/funnel-sans@5.2.5", "", {}, "sha512-2o1Nt2agrVmOy0CQuTnl3a+uAgfAaDbwFaxahLce5poLxEzRSbSZ5DA5+S+ggIkkSlOQrqNSow/HEx9IAG343Q=="],
 
     "@hookform/resolvers": ["@hookform/resolvers@5.0.1", "", { "dependencies": { "@standard-schema/utils": "^0.3.0" }, "peerDependencies": { "react-hook-form": "^7.55.0" } }, "sha512-u/+Jp83luQNx9AdyW2fIPGY6Y7NG68eN2ZW8FOJYL+M0i4s49+refdJdOp/A9n9HFQtQs3HIDHQvX3ZET2o7YA=="],
 
