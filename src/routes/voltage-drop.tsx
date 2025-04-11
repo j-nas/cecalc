@@ -1,3 +1,4 @@
+import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
@@ -45,9 +46,12 @@ const formSchema = z.object({
 });
 
 function RouteComponent() {
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+  };
   return (
     <div className="w-full h-screen flex items-center justify-center">
-      <Card className="w-1/2">
+      <Card className="sm:w-1/2 w-11/12">
         <CardHeader>
           <CardTitle>
             <h1 className="text-2xl font-bold">Voltage Drop Calculator</h1>
@@ -58,6 +62,47 @@ function RouteComponent() {
             </p>
           </CardDescription>
         </CardHeader>
+        <CardContent>
+          <form onSubmit={handleSubmit} className="space-y-4">
+            <div className="grid grid-cols-1 gap-4">
+              <div>
+                <label htmlFor="conductorSize" className="block mb-2">
+                  Conductor Size
+                </label>
+                <input
+                  type="number"
+                  id="conductorSize"
+                  name="conductorSize"
+                  className="w-full p-2 border border-gray-300 rounded"
+                />
+              </div>
+              <div>
+                <label htmlFor="length" className="block mb-2">
+                  Length (ft)
+                </label>
+                <input
+                  type="number"
+                  id="length"
+                  name="length"
+                  className="w-full p-2 border border-gray-300 rounded"
+                />
+              </div>
+              <div>
+                <label htmlFor="voltage" className="block mb-2">
+                  Voltage (V)
+                </label>
+                <input
+                  type="number"
+                  id="voltage"
+                  name="voltage"
+                  className="w-full p-2 border border-gray-300 rounded"
+                />
+              </div>
+              {/* Add more fields as needed */}
+              <Button type="submit">Calculate</Button>
+            </div>
+          </form>
+        </CardContent>
       </Card>
     </div>
   );
