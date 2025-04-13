@@ -118,11 +118,12 @@ export function getMaximumDistance(
     ampacity,
     current,
   );
+
   const maximumDistance =
-    (metersPerAmp[conductorSize]?.[material()] ?? 0) *
+    ((metersPerAmp[conductorSize]?.[material()] ?? 0) / current) *
     allowableVoltageDrop *
     distanceCorrectionFactor *
     voltageFactor;
 
-  return maximumDistance;
+  return Math.floor(maximumDistance);
 }
